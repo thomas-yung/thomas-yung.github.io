@@ -1,0 +1,116 @@
+body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+  display: table;
+  position: absolute;
+  font-family: 'Bitter', serif;
+}
+
+.line {
+  border-top: 4px dashed black;
+  height: 0;
+  width: 0;
+  margin: auto;
+
+  transition: width 1s ease;
+  -moz-transition: width 1s ease; /* Firefox 4 */
+  -webkit-transition: width 1s ease; /* Safari and Chrome */
+  -o-transition: width 1s ease; /* Opera */
+}
+
+
+/* ----- Section: Title ----- */
+
+#pagewrapper {
+  display: table-cell;
+  vertical-align: middle;
+  position:relative;
+}
+
+#titlewrapper {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5%;
+}
+
+#titlewrapper h1, h3, table {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: table;
+
+  text-align: center;
+}
+
+#titlewrapper h1 {
+  font-size: 10vmin;
+}
+
+#titlewrapper .mainh3 {
+  font-size: 3vmin;
+  margin-bottom: 2%;
+}
+
+#titlewrapper table {
+  font-size: 2.5vmin;
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+#titlewrapper td {
+  width: 33%;
+}
+
+#titlewrapper a {
+  text-decoration: none;
+  color: #002147;
+}
+
+#titlewrapper a:visited {
+  color: inherit;
+  color: #002147;
+}
+
+
+/* ----- Section: Master ----- */
+
+.expandable {
+  overflow-y: hidden;
+  max-height: 0px;
+  width: 100%;
+
+  transition: max-height 1s ease;
+  -moz-transition: max-height 1s ease; /* Firefox 4 */
+  -webkit-transition: max-height 1s ease; /* Safari and Chrome */
+  -o-transition: max-height 1s ease; /* Opera */
+}
+
+.grown {
+  max-height: 1000px;
+}
+
+
+/* ----- Section: Work ----- */
+
+.alth3 {
+  margin-bottom: 1%;
+  font-size: 2.5vmin;
+}
+
+.workcontent {
+  display: block;
+  text-align: center;
+}
+
+.workcontent li {
+  width: auto;
+  padding: 2px;
+  display: inline-block;
+  list-style: none;
+  background-color: black;
+  color: white;
+}

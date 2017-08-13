@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: 'Bitter', serif;
+}
+
+/* Menu */
+
+#menu {
+  width: auto;
+  z-index: 0;
+}
+
+#menu ul {
+  width: 100%;
+  list-style-type: none;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+}
+
+#menu li {
+  float: left;
+}
+
+#menu li a {
+  display: block;
+  color: white;
+  padding: 18px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#menu li a:hover {
+  text-decoration: overline;
+}
+
+/* Title Page */
+
+#title-under {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+
+  background-color: white;
+}
+
+#title-over {
+  height: inherit;
+  width: inherit;
+  overflow: inherit;
+  position: inherit;
+  top: inherit;
+  left: inherit;
+  z-index: 2;
+  opacity: 0;
+
+  transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in; /* Firefox 4 */
+  -webkit-transition: opacity 1s ease-in; /* Safari and Chrome */
+  -o-transition: opacity 1s ease-in; /* Opera */
+
+  text-align: center;
+  background-color: black;
+}
+
+#title-text {
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  background-color: black;
+}
+
+#title-text h1 {
+  color: white;
+  font-size: 250px;
+}
+
+#title-nav {
+  width: 100%;
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 5px;
+  -webkit-transform: rotate(270deg);
+}
+
+#title-nav a {
+  color: white;
+  font-size: 60px;
+  text-decoration: none;
+}
+
+/* Work Page */
+
+#work-under {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateY(100%);
+  z-index: -1;
+
+  background-color: white;
+}
+
+#work-text {
+  padding-top: 1%;
+  margin-left: 2.5%;
+}
+
+#work-text h1 {
+  color: black;
+  font-size: 150px;
+  line-height: 100px;
+  margin-bottom: 0;
+  margin-top: 6%;
+}
+
+.border-left {
+  border-left: solid 1px black;
+}
+
+.border-right {
+  border-right: solid 1px black;
+}
+
+#edu-text td {
+  vertical-align: top;
+}
+
+#edu-link {
+  text-decoration: none;
+}
+
+#edu-link :hover {
+  text-decoration: overline;
+}
+
+#emp-text td {
+  vertical-align: top;
+}
+
+#emp-link {
+  text-decoration: none;
+}
+
+#emp-link :hover {
+  text-decoration: overline;
+}
+
+#work-text h2 {
+  padding-left: 2%;
+  font-size: 45px;
+}
+
+#work-under img.top {
+  width: 10%;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+#work-under img.middle {
+  width: 10%;
+  position: absolute;
+  top: 45%;
+  right: 20%;
+}
+
+#work-under img.bottom {
+  width: 10%;
+  position: absolute;
+  top: 70%;
+  right: 20%;
+}
+
+/* Music Page */
+
+#music-under {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateY(200%);
+  z-index: -1;
+
+  background-color: white;
+}
+
+#music-text {
+  padding-top: 1%;
+  padding-left: 2.5%;
+}
+
+#music-text h1 {
+  color: black;
+  font-size: 150px;
+  line-height: 100px;
+}
+
+#music-text h2 {
+  padding-left: 2%;
+  font-size: 45px;
+  text-decoration: underline;
+}
+
+#music-under img.top {
+  width: 10%;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+#music-under img.middle {
+  width: 10%;
+  position: absolute;
+  top: 45%;
+  right: 20%;
+}
+
+#music-under img.bottom {
+  width: 10%;
+  position: absolute;
+  top: 70%;
+  right: 20%;
+}
+
+
+/* Contact Page */
+
+#contact-under {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateY(300%);
+  z-index: -1;
+
+  background-color: black;
+}
+
+#contact-table {
+  text-align: center;
+  vertical-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#contact-table td {
+  width: 33%;
+}
+
+#contact-under h3 {
+  color: white;
+  font-size: 60px;
+}
+
+#contact-under a {
+  text-decoration: none;
+}
+
+#contact-under a:hover {
+  text-decoration: overline;
+  color: white;
+}
