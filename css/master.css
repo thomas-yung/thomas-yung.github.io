@@ -7,6 +7,18 @@ body {
   display: table;
   position: absolute;
   font-family: 'Bitter', serif;
+
+  filter: invert(0%);
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+
+.onMusic {
+  filter: invert(100%);
+  background-color: black;
 }
 
 .line {
@@ -67,12 +79,11 @@ body {
 
 #titlewrapper a {
   text-decoration: none;
-  color: #002147;
+  color: #013c82;
 }
 
 #titlewrapper a:visited {
-  color: inherit;
-  color: #002147;
+  color: #013c82;
 }
 
 
@@ -113,4 +124,33 @@ body {
   list-style: none;
   background-color: black;
   color: white;
+}
+
+
+
+/* ----- Section: Music ----- */
+
+.prefilter {
+  filter: invert(100%);
+}
+
+
+
+/* ----- Section: Contact ----- */
+
+#contactwrapper h4 {
+  text-align: center;
+}
+
+.circleimg {
+  max-width: 30%;
+  height: auto;
+  margin: auto;
+  clip-path: circle(80px at center);
+  display: block;
+
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg); /* Firefox 4 */
+  -webkit-transform: rotate(90deg); /* Safari and Chrome */
+  -o-transform: rotate(90deg); /* Opera */
 }

@@ -43,6 +43,9 @@ function toggleSection(target) {
 
 function close(target) {
   document.getElementById(target+"wrapper").style.maxHeight = "0px";
+  if (target === "music") {
+    document.getElementsByTagName("body")[0].classList.remove("onMusic");
+  }
   sectionStatus[secToNum(target)] = false;
   closeSubSections(target);
   remLine(target);
@@ -52,7 +55,7 @@ function close(target) {
 function closeSubSections(target) {
   switch (target) {
     case "work":
-    document.getElementById("educationcontent").classList.remove("grown");
+      document.getElementById("educationcontent").classList.remove("grown");
       document.getElementById("employmentcontent").classList.remove("grown");
       return;
     default:
@@ -68,6 +71,9 @@ function growSection(target) {
     }
   }
   // Grow intended
+  if (target === "music") {
+    document.getElementsByTagName("body")[0].classList.add("onMusic");
+  }
   document.getElementById(target+"wrapper").style.maxHeight = "1000px";
   sectionStatus[secToNum(target)] = true;
   addLine(target);
