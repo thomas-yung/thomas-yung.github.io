@@ -1,0 +1,71 @@
+<!DOCTYPE HTML5>
+
+<html>
+
+  <head>
+
+    <title>Blog | Thomas Yung</title>
+    <link rel="stylesheet" href="css/blog.css"/>
+    <script src="scripts/blogScript.js"></script>
+
+  </head>
+
+
+  <body>
+    <div id="pagewrapper">
+
+      <div id="leftpanel">
+
+        <table id="topbar">
+          <tbody>
+            <tr>
+
+              <td>
+                <h3>Articles</h3>
+              </td>
+
+              <td>
+                <h3>Home</h3>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <tbody>
+
+            <tr>
+              <td onmouseover="addLine('website')"
+                  onmouseleave="remLine('website')"
+                  onclick="toggleSection('website')">
+                <div id="website-o" class="line"></div>
+                  Website
+                <div id="website-u" class="line"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td onmouseover="addLine('tron')"
+                  onmouseleave="remLine('tron')"
+                  onclick="toggleSection('tron')">
+                <div id="tron-o" class="line"></div>
+                  Tron
+                <div id="tron-u" class="line"></div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+
+      <div id="rightpanel">
+
+
+      </div>
+
+    </div>
+  </body>
+
+</html>

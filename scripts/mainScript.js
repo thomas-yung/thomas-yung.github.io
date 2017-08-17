@@ -1,6 +1,6 @@
 // Position of entry on sectionStatus corresponds to sections
-var sections      = ["work", "music", "contact"];
-var sectionStatus = [false, false, false];
+var sections      = ["work", "blog", "music", "contact"];
+var sectionStatus = [false, false, false, false];
 
 // Return the index of the section name
 function secToNum(target) {
@@ -66,7 +66,7 @@ function closeSubSections(target) {
 function growSection(target) {
   // Close any OTHERS
   for (i = 0; i < sections.length; i++) {
-    if (sections[i] !== target) {
+    if ((sections[i] !== target) && (sections[i] !== "blog")) {
       close(sections[i]);
     }
   }
