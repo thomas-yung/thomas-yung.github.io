@@ -14,6 +14,13 @@ body {
   -moz-transition: all 1s ease; /* Firefox 4 */
   -webkit-transition: all 1s ease; /* Safari and Chrome */
   -o-transition: all 1s ease; /* Opera */
+
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .onMusic {
@@ -98,6 +105,13 @@ body {
   -moz-transition: max-height 1s ease; /* Firefox 4 */
   -webkit-transition: max-height 1s ease; /* Safari and Chrome */
   -o-transition: max-height 1s ease; /* Opera */
+
+  /* Enable hardware acceleration to fix laggy transitions */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .grown {
