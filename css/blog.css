@@ -1,26 +1,30 @@
 body {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
 
   margin: 0;
+
+  font-family: 'Bitter', serif;
 }
 
 #pagewrapper {
   width: 65%;
   height: 100%;
   margin: 0% 17.5% 0% 17.5%;
+  position: fixed;
 
   background-color: grey;
 }
 
 #leftpanel, #rightpanel {
   height: 100%;
-  float: left;
+  position: absolute;
+  padding-top: 2.5%;
 }
 
 
 .line {
-  border-top: 4px dashed black;
+  border-top: 4px dashed white;
   height: 0;
   width: 0;
   margin: auto;
@@ -35,13 +39,19 @@ body {
 
 #leftpanel {
   width: 25%;
-  background-color: lightblue;
+  background-color: #555454;
 }
 
 table {
-  margin: 5%;
   width: 90%;
   text-align: center;
+  color: white;
+  font-size: 2vmin;
+}
+
+#topbar a {
+  text-decoration: underline;
+  color: #B5BDE4;
 }
 
 #topbar h3 {
@@ -53,13 +63,49 @@ table {
 
 #rightpanel {
   width: 75%;
-  background-color: blue;
+  left: 25%;
+  background-color: #BEBEBE;
 }
 
-.content {
-  opacity: 0%;
+#cover {
+  width: 100%;
+  height: 100%;
+  float: left;
+  bottom: 0;
+  position: absolute;
+  z-index: 5;
+
+  transition: height 1s ease;
+  -moz-transition: height 1s ease; /* Firefox 4 */
+  -webkit-transition:height 1s ease; /* Safari and Chrome */
+  -o-transition: height 1s ease; /* Opera */
+
+  -webkit-transform: rotate(180);
+  -moz-transform: rotate(180);
+  -ms-transform: rotate(180);
+  -o-transform: rotate(180);
+  transform: rotate(180);
+
+  background-color: inherit;
 }
 
-.activecontent {
-  opacity: 100%;
+/* ----- Articles ----- */
+
+.articlecontent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*background-color: #8C8C8C;*/
+}
+
+.hiddenarticle {
+  z-index: -1;
+}
+
+.activearticle {
+  z-index: 3;
+}
+
+.textholder {
+  margin: 2.5%;
 }

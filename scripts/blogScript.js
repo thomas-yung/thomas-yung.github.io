@@ -1,6 +1,4 @@
-articles      = ["website", "tron"];
-articleStatus = [false, false];
-
+articles = ["website", "tron"];
 
 // Return the index of the section name
 function secToNum(target) {
@@ -20,9 +18,7 @@ function addLine(target) {
 }
 
 function remLine(target) {
-  if (!articleStatus[secToNum(target)]) {
-    setLineWidth(target, "0%")
-  }
+  setLineWidth(target, "0%");
   return;
 }
 
@@ -35,27 +31,37 @@ function setLineWidth(target, width) {
 }
 
 /* ----- Section Open/Close Animation --- */
-function toggleSection(target) {
-  articleStatus[secToNum(target)] ? close(target) : growSection(target);
+function cover() {
+  document.getElementById("cover").style.height = "100%";
+  return;
 }
 
-function hide(target) {
-  document.getElementById(target+"wrapper").classList.remove("activecontent");
-  articleStatus[secToNum(target)] = false;
-  remLine(target);
+function uncover() {
+  document.getElementById("cover").style.height = "0%";
+  return;
+}
+
+function hideAll() {
+  for (i = 0; i < articles.length; i++) {
+    var articleCL = document.getElementById(articles[i]+"content").classList;
+    articleCL.add("hiddenarticle");
+    articleCL.remove("activearticle");
+  }
   return;
 }
 
 function show(target) {
-  // Close any OTHERS
-  for (i = 0; i < articles.length; i++) {
-    if (articles[i] !== target) {
-      close(articles[i]);
-    }
-  }
-  // Grow intended
-  document.getElementById(target+"wrapper").classList.add("activecontent");
-  articleStatus[secToNum(target)] = true;
+  // Bring up cover
+  cover();
+  // Hide everything (after 1 second)
+  setTimeout(hideAll, 1000);
+  // Show intended (after 1 second)
+  setTimeout(function temp() {
+    var targetCL = document.getElementById(target+"content").classList;
+    targetCL.add("activecontent");
+    targetCL.remove("hiddenarticle");
+  }, 1000);
+  setTimeout(uncover, 1000);
 }
 
 

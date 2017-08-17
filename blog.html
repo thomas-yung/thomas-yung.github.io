@@ -6,6 +6,8 @@
 
     <title>Blog | Thomas Yung</title>
     <link rel="stylesheet" href="css/blog.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700"
+                                                               rel="stylesheet">
     <script src="scripts/blogScript.js"></script>
 
   </head>
@@ -21,11 +23,11 @@
             <tr>
 
               <td>
-                <h3>Articles</h3>
+                <h3><u>Articles</u></h3>
               </td>
 
               <td>
-                <h3>Home</h3>
+                <h3><a href="index.html">Home</a></h3>
               </td>
 
             </tr>
@@ -38,7 +40,7 @@
             <tr>
               <td onmouseover="addLine('website')"
                   onmouseleave="remLine('website')"
-                  onclick="toggleSection('website')">
+                  onclick="show('website')">
                 <div id="website-o" class="line"></div>
                   Website
                 <div id="website-u" class="line"></div>
@@ -48,7 +50,7 @@
             <tr>
               <td onmouseover="addLine('tron')"
                   onmouseleave="remLine('tron')"
-                  onclick="toggleSection('tron')">
+                  onclick="show('tron')">
                 <div id="tron-o" class="line"></div>
                   Tron
                 <div id="tron-u" class="line"></div>
@@ -61,6 +63,36 @@
       </div>
 
       <div id="rightpanel">
+
+        <div id="cover">
+
+        </div>
+
+        <div id="websitecontent" class="articlecontent">
+          <p class="textholder">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget semper lacus. Duis porttitor eu purus quis hendrerit. Aenean ac odio sit amet libero posuere cursus quis eu lectus. Sed vel lacus quis metus lobortis tempor. Mauris pulvinar sed sapien malesuada ullamcorper. Vestibulum dignissim sagittis accumsan. Cras condimentum ante ante, non volutpat urna molestie ac. Vivamus fringilla pretium elit, eu consequat leo venenatis a. Proin massa ligula, ullamcorper quis viverra et, ornare ut quam. In hac habitasse platea dictumst. Nunc turpis lectus, dictum nec nulla at, gravida dictum odio. Quisque tincidunt eleifend odio, quis pretium ex vulputate ac. Maecenas gravida justo quis nulla congue, vitae suscipit nibh rutrum. Vivamus non nunc vel lacus ornare accumsan.
+
+            Ut sed lorem vitae lorem feugiat congue. In hendrerit feugiat tortor, vitae sagittis eros feugiat ut. Pellentesque ut quam ut felis tristique egestas a nec nulla. Ut rutrum sagittis convallis. Integer egestas finibus ipsum, sed malesuada nunc varius ac. Phasellus commodo at dolor fringilla auctor. Mauris vel tempus sapien.
+
+            Sed volutpat nulla quam, eu laoreet mi placerat non. Mauris quis turpis ut ex accumsan hendrerit vitae nec lorem. Vivamus tempus tempus lorem quis vehicula. Aliquam faucibus dui sed tortor fermentum porta. Praesent euismod feugiat ante dictum tristique. Nunc sit amet pretium quam. Nam non tincidunt nulla, in commodo risus. Curabitur vel posuere mi, vitae vulputate quam.
+
+            Aenean faucibus nulla orci, in semper odio suscipit eu. Phasellus vitae est fermentum, mollis ante id, imperdiet sapien. Cras imperdiet nulla non nisl pharetra interdum. Nam suscipit vestibulum lorem, sed tincidunt nulla auctor id. Sed vulputate tellus quis eros auctor, at consequat purus laoreet. Vivamus maximus eget lorem sed cursus. Donec tincidunt id risus eget maximus. In ultrices enim felis, a venenatis ipsum venenatis vel. Mauris viverra diam aliquet risus dapibus, nec sagittis mauris interdum. Fusce ornare tellus a mi sagittis sodales. Cras fringilla, sem eget faucibus consequat, turpis lacus bibendum lectus, nec consequat turpis diam a eros.
+
+            Fusce eget arcu enim. Fusce dolor erat, accumsan sodales convallis at, ornare vitae sem. Donec vulputate sodales urna, id ultricies quam pellentesque vitae. Nam a dolor ornare, fringilla nibh pretium, consequat purus. Phasellus at purus rhoncus, pellentesque sem non, congue magna. Sed odio mauris, mattis eu porttitor vitae, pretium sed eros. Duis dignissim, metus in maximus molestie, nibh turpis egestas nisl, at dictum metus massa id leo.
+          </p>
+        </div>
+
+        <div id="troncontent" class="articlecontent">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget semper lacus. Duis porttitor eu purus quis hendrerit. Aenean ac odio sit amet libero posuere cursus quis eu lectus. Sed vel lacus quis metus lobortis tempor. Mauris pulvinar sed sapien malesuada ullamcorper. Vestibulum dignissim sagittis accumsan. Cras condimentum ante ante, non volutpat urna molestie ac. Vivamus fringilla pretium elit, eu consequat leo venenatis a. Proin massa ligula, ullamcorper quis viverra et, ornare ut quam. In hac habitasse platea dictumst. Nunc turpis lectus, dictum nec nulla at, gravida dictum odio. Quisque tincidunt eleifend odio, quis pretium ex vulputate ac. Maecenas gravida justo quis nulla congue, vitae suscipit nibh rutrum. Vivamus non nunc vel lacus ornare accumsan.
+
+          Ut sed lorem vitae lorem feugiat congue. In hendrerit feugiat tortor, vitae sagittis eros feugiat ut. Pellentesque ut quam ut felis tristique egestas a nec nulla. Ut rutrum sagittis convallis. Integer egestas finibus ipsum, sed malesuada nunc varius ac. Phasellus commodo at dolor fringilla auctor. Mauris vel tempus sapien.
+
+          Sed volutpat nulla quam, eu laoreet mi placerat non. Mauris quis turpis ut ex accumsan hendrerit vitae nec lorem. Vivamus tempus tempus lorem quis vehicula. Aliquam faucibus dui sed tortor fermentum porta. Praesent euismod feugiat ante dictum tristique. Nunc sit amet pretium quam. Nam non tincidunt nulla, in commodo risus. Curabitur vel posuere mi, vitae vulputate quam.
+
+          Aenean faucibus nulla orci, in semper odio suscipit eu. Phasellus vitae est fermentum, mollis ante id, imperdiet sapien. Cras imperdiet nulla non nisl pharetra interdum. Nam suscipit vestibulum lorem, sed tincidunt nulla auctor id. Sed vulputate tellus quis eros auctor, at consequat purus laoreet. Vivamus maximus eget lorem sed cursus. Donec tincidunt id risus eget maximus. In ultrices enim felis, a venenatis ipsum venenatis vel. Mauris viverra diam aliquet risus dapibus, nec sagittis mauris interdum. Fusce ornare tellus a mi sagittis sodales. Cras fringilla, sem eget faucibus consequat, turpis lacus bibendum lectus, nec consequat turpis diam a eros.
+
+          Fusce eget arcu enim. Fusce dolor erat, accumsan sodales convallis at, ornare vitae sem. Donec vulputate sodales urna, id ultricies quam pellentesque vitae. Nam a dolor ornare, fringilla nibh pretium, consequat purus. Phasellus at purus rhoncus, pellentesque sem non, congue magna. Sed odio mauris, mattis eu porttitor vitae, pretium sed eros. Duis dignissim, metus in maximus molestie, nibh turpis egestas nisl, at dictum metus massa id leo.
+        </div>
 
 
       </div>
