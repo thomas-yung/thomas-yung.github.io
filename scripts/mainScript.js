@@ -1,6 +1,6 @@
 // Position of entry on sectionStatus corresponds to sections
 var sections      = ["work", "blog", "music", "contact"];
-var sectionStatus = [false, false, false, false];
+var openSection = null;
 
 // Return the index of the section name
 function secToNum(target) {
@@ -21,7 +21,7 @@ function addLine(target) {
 }
 
 function remLine(target) {
-  if (!sectionStatus[secToNum(target)]) {
+  if (target !== openSection) {
     setLineWidth(target, "0%")
   }
   return;
@@ -38,7 +38,12 @@ function setLineWidth(target, width) {
 
 /* ----- Section Open/Close Animation --- */
 function toggleSection(target) {
-  sectionStatus[secToNum(target)] ? close(target) : growSection(target);
+  if (target === openSection) {
+    close(target); 
+    openSection = null;
+  } else {
+    growSection(target);
+  }
 }
 
 function close(target) {
@@ -46,7 +51,6 @@ function close(target) {
   if (target === "music") {
     document.getElementsByTagName("body")[0].classList.remove("onMusic");
   }
-  sectionStatus[secToNum(target)] = false;
   closeSubSections(target);
   remLine(target);
   return;
@@ -75,7 +79,7 @@ function growSection(target) {
     document.getElementsByTagName("body")[0].classList.add("onMusic");
   }
   document.getElementById(target+"wrapper").style.maxHeight = "1000px";
-  sectionStatus[secToNum(target)] = true;
+  openSection = target;
   addLine(target);
 }
 

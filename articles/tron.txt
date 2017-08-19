@@ -1,0 +1,7 @@
+At the end of my first year at Imperial, I partook in a group project (along with <a href=””>Shashwat Dalal</a>, <a href=””>Marcel Kenlay</a> and <a href=””>Andy Li</a>) which saw us create an ARM emulator, assembler and lastly a group extension which we chose to be our own implementation of the classic <i>TRON</i> arcade game.
+<br />
+For the emulator and assembler, we followed a specification outlined to us however the game was our own choosing. Since we only had a week to create the product from start to finish (along with writing a report and presentation for all parts) we divided the tasks amongst team members to ensure we could arrive at a completed product.
+<br />
+Not only did we aim to create the game, but we also wanted to introduce an AI opponent into it. Since the only AI decision to be made was the direction (movement is continuous) we didn’t have to consider too many factors in this. We discussed a variety of ideas and made sure we only pursued one in order to save time. The various approaches are discussed below.
+<br />
+<h4>Approach 1: Clearest Path</h4>

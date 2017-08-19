@@ -46,7 +46,7 @@ table {
   width: 90%;
   text-align: center;
   color: white;
-  font-size: 2vmin;
+  font-size: 3vmin;
 }
 
 #topbar a {
@@ -55,7 +55,7 @@ table {
 }
 
 #topbar h3 {
-  font-size: 2.5vmin;
+  font-size: 3.5vmin;
 }
 
 
@@ -64,7 +64,7 @@ table {
 #rightpanel {
   width: 75%;
   left: 25%;
-  background-color: #BEBEBE;
+  background-color: #EFEFEF;
 }
 
 #cover {
@@ -95,7 +95,6 @@ table {
   position: absolute;
   width: 100%;
   height: 100%;
-  /*background-color: #8C8C8C;*/
 }
 
 .hiddenarticle {
@@ -107,5 +106,8 @@ table {
 }
 
 .textholder {
+  max-height: 90%;
   margin: 2.5%;
+  font-size: 2.5vmin;
+  overflow-y: scroll;
 }

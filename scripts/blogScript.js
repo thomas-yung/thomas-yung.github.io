@@ -1,4 +1,5 @@
-articles = ["website", "tron"];
+var articles = ["website", "tron"];
+var openArticle = null;
 
 // Return the index of the section name
 function secToNum(target) {
@@ -18,7 +19,9 @@ function addLine(target) {
 }
 
 function remLine(target) {
-  setLineWidth(target, "0%");
+  if (target !== openArticle) {
+    setLineWidth(target, "0%");
+  }
   return;
 }
 
@@ -46,6 +49,7 @@ function hideAll() {
     var articleCL = document.getElementById(articles[i]+"content").classList;
     articleCL.add("hiddenarticle");
     articleCL.remove("activearticle");
+    remLine(articles[i]);
   }
   return;
 }
@@ -61,6 +65,7 @@ function show(target) {
     targetCL.add("activecontent");
     targetCL.remove("hiddenarticle");
   }, 1000);
+  openArticle = target;
   setTimeout(uncover, 1000);
 }
 
