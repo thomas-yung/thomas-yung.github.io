@@ -72,6 +72,9 @@
 
         <div id="websitecontent" class="articlecontent">
           <p class="textholder">
+            <a href="https://github.com/thomas-yung/thomas-yung.github.io">GitHub link</a>
+            <br />
+            <br />
             When building a personal website, I believe it is important to balance simplicity with a demonstration of the creator's ability. My objective was to make a clean, accessible website to provide a platform for me to showcase any projects I had, both in music and programming.
             <br />
             <br />
@@ -87,15 +90,33 @@
         </div>
 
         <div id="troncontent" class="articlecontent">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget semper lacus. Duis porttitor eu purus quis hendrerit. Aenean ac odio sit amet libero posuere cursus quis eu lectus. Sed vel lacus quis metus lobortis tempor. Mauris pulvinar sed sapien malesuada ullamcorper. Vestibulum dignissim sagittis accumsan. Cras condimentum ante ante, non volutpat urna molestie ac. Vivamus fringilla pretium elit, eu consequat leo venenatis a. Proin massa ligula, ullamcorper quis viverra et, ornare ut quam. In hac habitasse platea dictumst. Nunc turpis lectus, dictum nec nulla at, gravida dictum odio. Quisque tincidunt eleifend odio, quis pretium ex vulputate ac. Maecenas gravida justo quis nulla congue, vitae suscipit nibh rutrum. Vivamus non nunc vel lacus ornare accumsan.
-
-          Ut sed lorem vitae lorem feugiat congue. In hendrerit feugiat tortor, vitae sagittis eros feugiat ut. Pellentesque ut quam ut felis tristique egestas a nec nulla. Ut rutrum sagittis convallis. Integer egestas finibus ipsum, sed malesuada nunc varius ac. Phasellus commodo at dolor fringilla auctor. Mauris vel tempus sapien.
-
-          Sed volutpat nulla quam, eu laoreet mi placerat non. Mauris quis turpis ut ex accumsan hendrerit vitae nec lorem. Vivamus tempus tempus lorem quis vehicula. Aliquam faucibus dui sed tortor fermentum porta. Praesent euismod feugiat ante dictum tristique. Nunc sit amet pretium quam. Nam non tincidunt nulla, in commodo risus. Curabitur vel posuere mi, vitae vulputate quam.
-
-          Aenean faucibus nulla orci, in semper odio suscipit eu. Phasellus vitae est fermentum, mollis ante id, imperdiet sapien. Cras imperdiet nulla non nisl pharetra interdum. Nam suscipit vestibulum lorem, sed tincidunt nulla auctor id. Sed vulputate tellus quis eros auctor, at consequat purus laoreet. Vivamus maximus eget lorem sed cursus. Donec tincidunt id risus eget maximus. In ultrices enim felis, a venenatis ipsum venenatis vel. Mauris viverra diam aliquet risus dapibus, nec sagittis mauris interdum. Fusce ornare tellus a mi sagittis sodales. Cras fringilla, sem eget faucibus consequat, turpis lacus bibendum lectus, nec consequat turpis diam a eros.
-
-          Fusce eget arcu enim. Fusce dolor erat, accumsan sodales convallis at, ornare vitae sem. Donec vulputate sodales urna, id ultricies quam pellentesque vitae. Nam a dolor ornare, fringilla nibh pretium, consequat purus. Phasellus at purus rhoncus, pellentesque sem non, congue magna. Sed odio mauris, mattis eu porttitor vitae, pretium sed eros. Duis dignissim, metus in maximus molestie, nibh turpis egestas nisl, at dictum metus massa id leo.
+          <p class="textholder">
+            <a href="https://github.com/thomas-yung/tron">GitHub link</a>
+            <br />
+            <br />
+            At the end of my first year at Imperial, I partook in a group project (along with <a href=””>Shashwat Dalal</a>, <a href=””>Marcel Kenlay</a> and <a href=””>Andy Li</a>) which saw us create an ARM emulator, assembler and lastly a group extension which we chose to be our own implementation of the classic <i>TRON</i> arcade game.
+            <br />
+            For the emulator and assembler, we followed a specification outlined to us however the game was our own choosing. Since we only had a week to create the product from start to finish (along with writing a report and presentation for all parts) we divided the tasks amongst team members to ensure we could arrive at a completed product. Whilst what we finished was received well by the assessors, I only worked on sections of the code and wanted to experience using the graphics library and also design my own AI opponent.
+            <br />
+            The AI schemas are discusssed below.
+            <br />
+            <br />
+            <b>Approach 1: Random valid move</b>
+            <br />
+            I would very loosely describe this as an artificial <i>intelligence</i>. This was more of a way to simply test whether or not the game was funciioning and computer chosen moves worked correctly. Quite simply, the computer randomly picks one of the three moves available to the player (turning back on one's self is not an option).
+            <br />
+            It is somewhat obvious that this opponent eliminated itself very quickly so a buffer was added so that it would continue straight for a user input proportion of the time. This buffer was implemented by randomly generating a number from 0 to 100 and if it is less that the user's limit then the player turns randomly (note: a turn includes continuing straight).
+            <br />
+            <br />
+            <b>Approach 2: Random survival move</b>
+            <br />
+            This appoarch started life as a helper method for the next approach however I thought I may as well use it as it's own AI to be able to test if it worked. In this case, turns can be forced and picked from the same list of valid moves that approach 1 yields. This time the computer checks to see if there are any occupants of the hyperthetical destination cell before moving. The forcing of turns avoided it hitting other players more and going out of bounds.
+            <br />
+            <br />
+            <b>Approach 3: Most immediate space</b>
+            <br />
+            Now the computer starts to think *slightly* more intelligently. Here I introduced the idea of scoring possibilities by assiging a score for each possible turn. The score is how many unoccupied cells there are in a chain from the current position if the player continued in a straight line. Although this does not avoid enclosing one's self or being enclosed, it preforms massivly better than approach 2. This does lead to a more boring AI which tends to turn less often. To spice up the movement, I multiply each turn score by a number between 1.0 and 1.5 so that the movement isn't deterministic but the value of the scores isn't lost.
+          </p>
         </div>
 
 

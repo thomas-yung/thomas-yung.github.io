@@ -97,6 +97,10 @@ table {
   height: 100%;
 }
 
+.subtitle {
+  text-align: center; 
+}
+
 .hiddenarticle {
   z-index: -1;
 }
