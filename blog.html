@@ -100,6 +100,8 @@
             <br />
             The AI schemas are discusssed below.
             <br />
+            Another decision I had to make was between the use of <i>OpenGL</i> and <i>SDL</i> as my graphics library. The group-completed version of the game used <i>OpenGL</i> however I found it to be overkill for a 2D game such as <i>TRON</i>. Fortunately the jump to <i>SDL</i> was easy and it is well documented online. In many ways, completely rewriting the code was forced by my decision to switch graphics libraries as the way each works is very different. In my case, <i>SDL</i> has a very 'step-by-step' approach whereby I can explicitly update the board and then display it. In my opinion this is a very clear way to structure a simple game and it made debugging very painless.
+            <br />
             <br />
             <b>Approach 1: Random valid move</b>
             <br />
