@@ -69,6 +69,10 @@ body {
   font-size: 10vmin;
 }
 
+#titlewrapper h2 {
+  text-align: center;
+}
+
 #titlewrapper .mainh3 {
   font-size: 3vmin;
   margin-bottom: 2%;
