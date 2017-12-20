@@ -15,115 +15,62 @@
 
   <body>
     <div id="pagewrapper">
+      <div id="tablewrapper">
 
-      <div id="leftpanel">
-
-        <table id="topbar">
+        <table>
           <tbody>
-
             <tr>
-              <td>
-                <h3><a href="index.html">Home</a></h3>
+              <td onmouseover="addLine('homelink')"
+                  onmouseleave="remLine('homelink')"
+                  onclick="parent.location='index.html'">
+                <div id="homelink-o" class="line"></div>
+                <h1><a href="index.html">Home</a></h1>
+                <div id="homelink-u" class="line"></div>
               </td>
             </tr>
-
-            <tr>
-              <td>
-                <h3><u>Articles</u></h3>
-              </td>
-            </tr>
-
           </tbody>
         </table>
 
         <table>
-          <tbody>
+        <tbody>
 
-            <tr>
-              <td onmouseover="addLine('website')"
-                  onmouseleave="remLine('website')"
-                  onclick="show('website')">
-                <div id="website-o" class="line"></div>
-                  Website
-                <div id="website-u" class="line"></div>
-              </td>
-            </tr>
+          <thead>
 
-            <tr>
-              <td onmouseover="addLine('tron')"
-                  onmouseleave="remLine('tron')"
-                  onclick="show('tron')">
-                <div id="tron-o" class="line"></div>
-                  Tron
-                <div id="tron-u" class="line"></div>
-              </td>
-            </tr>
+            <td class="alignleft heading">
+              <h3>Programming</h3>
+            </td>
 
-          </tbody>
+            <td class="alignright heading">
+              <h3>Music</h3>
+            </td>
+
+          </thead>
+
+          <tr>
+
+            <td class="alignleft links">
+              NOTE: Articles marked with '(ICL)' are university set projects
+              <br />
+              <br />
+
+              <a href="maintenance.html">Making this website<a>
+              <br />
+              <a href="articles/tron_a.html">A simple but effective AI for TRON<a>
+              <br />
+              <a href="maintenance.html">(ICL) WACC Compiler<a>
+            </td>
+
+            <td class="alignright links">
+              <a href="maintenance.html">Be Together (ty Remix) - Major Lazer<a>
+              <br />
+            </td>
+
+          </tr>
+
+        </tbody>
         </table>
 
       </div>
-
-      <div id="rightpanel">
-
-        <div id="cover">
-
-        </div>
-
-        <div id="websitecontent" class="articlecontent">
-          <p class="textholder">
-            <a href="https://github.com/thomas-yung/thomas-yung.github.io">GitHub link</a>
-            <br />
-            <br />
-            When building a personal website, I believe it is important to balance simplicity with a demonstration of the creator's ability. My objective was to make a clean, accessible website to provide a platform for me to showcase any projects I had, both in music and programming.
-            <br />
-            <br />
-            The initial screen was designed to be minimal, as to not overload any viewers with information. Beyond the positioning, which seemed obvious for a page with little content, the only choices to make were in fonts and colour which are down to a subjective decision. The four menu options expand or change sections and ensure that only one section is expanded at any given time.
-            <br />
-            <br />
-            I avoided the convenience of using a <i>Javascript</i> library such as <i>jQuery</i> because I found more use in building experience in the language itself. Having been taught <i>Java</i> at <a href=”https://www.imperial.ac.uk” target=”_blank”>university</a> and I have had lots of experience using the language. Naturally I found the transition between the languages relatively simple as the syntax is very similar and my aims could be completed without having to encounter many new concepts. Fortunately the language is well documented online and there is a wealth of resources and forums to learn from.
-            <br />
-            <br />
-            In order to ensure only one section would be open at any given time, I had to keep track of the expanded section,something which also helped with toggling the expansion of section rather than only opening upon a click. Following this it was simple to write the code that would handle sections opening and closing and also the lines above the menu option (which remain visible for the open section).
-
-          </p>
-        </div>
-
-        <div id="troncontent" class="articlecontent">
-          <p class="textholder">
-            <a href="https://github.com/thomas-yung/tron">GitHub link</a>
-            <br />
-            <br />
-            At the end of my first year at Imperial, I partook in a group project (along with <a href=””>Shashwat Dalal</a>, <a href=””>Marcel Kenlay</a> and <a href=””>Andy Li</a>) which saw us create an ARM emulator, assembler and lastly a group extension which we chose to be our own implementation of the classic <i>TRON</i> arcade game.
-            <br />
-            For the emulator and assembler, we followed a specification outlined to us however the game was our own choosing. Since we only had a week to create the product from start to finish (along with writing a report and presentation for all parts) we divided the tasks amongst team members to ensure we could arrive at a completed product. Whilst what we finished was received well by the assessors, I only worked on sections of the code and wanted to experience using the graphics library and also design my own AI opponent.
-            <br />
-            The AI schemas are discusssed below.
-            <br />
-            Another decision I had to make was between the use of <i>OpenGL</i> and <i>SDL</i> as my graphics library. The group-completed version of the game used <i>OpenGL</i> however I found it to be overkill for a 2D game such as <i>TRON</i>. Fortunately the jump to <i>SDL</i> was easy and it is well documented online. In many ways, completely rewriting the code was forced by my decision to switch graphics libraries as the way each works is very different. In my case, <i>SDL</i> has a very 'step-by-step' approach whereby I can explicitly update the board and then display it. In my opinion this is a very clear way to structure a simple game and it made debugging very painless.
-            <br />
-            <br />
-            <b>Approach 1: Random valid move</b>
-            <br />
-            I would very loosely describe this as an artificial <i>intelligence</i>. This was more of a way to simply test whether or not the game was funciioning and computer chosen moves worked correctly. Quite simply, the computer randomly picks one of the three moves available to the player (turning back on one's self is not an option).
-            <br />
-            It is somewhat obvious that this opponent eliminated itself very quickly so a buffer was added so that it would continue straight for a user input proportion of the time. This buffer was implemented by randomly generating a number from 0 to 100 and if it is less that the user's limit then the player turns randomly (note: a turn includes continuing straight).
-            <br />
-            <br />
-            <b>Approach 2: Random survival move</b>
-            <br />
-            This appoarch started life as a helper method for the next approach however I thought I may as well use it as it's own AI to be able to test if it worked. In this case, turns can be forced and picked from the same list of valid moves that approach 1 yields. This time the computer checks to see if there are any occupants of the hyperthetical destination cell before moving. The forcing of turns avoided it hitting other players more and going out of bounds.
-            <br />
-            <br />
-            <b>Approach 3: Most immediate space</b>
-            <br />
-            Now the computer starts to think *slightly* more intelligently. Here I introduced the idea of scoring possibilities by assiging a score for each possible turn. The score is how many unoccupied cells there are in a chain from the current position if the player continued in a straight line. Although this does not avoid enclosing one's self or being enclosed, it preforms massivly better than approach 2. This does lead to a more boring AI which tends to turn less often. To spice up the movement, I multiply each turn score by a number between 1.0 and 1.5 so that the movement isn't deterministic but the value of the scores isn't lost.
-          </p>
-        </div>
-
-
-      </div>
-
     </div>
   </body>
 

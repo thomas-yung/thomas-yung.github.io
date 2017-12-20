@@ -8,7 +8,7 @@
 
   <body>
     <section>
-      <id>1</id>
+      <id>0</id>
       <subheading>This is the first heading</subheading>
       <body>
         This is the first body
@@ -16,7 +16,7 @@
     </section>
 
     <section>
-      <id>2</id>
+      <id>1</id>
       <subheading>This is the second heading</subheading>
       <body>
         This is the second body
