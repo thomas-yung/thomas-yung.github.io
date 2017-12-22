@@ -1,0 +1,87 @@
+<!DOCTYPE HTML5>
+
+<html>
+
+  <head>
+
+    <title>WACC Compiler | Thomas Yung</title>
+    <link rel="stylesheet" href="../css/article.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700"
+                                                               rel="stylesheet">
+    <script src="../scripts/blogScript.js"></script>
+
+  </head>
+
+
+  <body>
+    <div id="pagewrapper">
+
+      <div id="menubar">
+        <table>
+          <tbody>
+            <tr>
+
+              <td>
+                <h3><a onmouseover="addLine('home')"
+                       onmouseleave="remLine('home')"
+                       onclick="toggleSection('home')"
+                       href="../index.html">
+                        <div id="home-o" class="line"></div>
+                        Home
+                        <div id="home-u" class="line"></div>
+                    </a>
+                </h3>
+              </td>
+
+              <td>
+                <h3><a onmouseover="addLine('articlelist')"
+                       onmouseleave="remLine('articlelist')"
+                       onclick="toggleSection('articlelist')"
+                       href="../blog.html">
+                        <div id="articlelist-o" class="line"></div>
+                        Article List
+                        <div id="articlelist-u" class="line"></div>
+                    </a>
+                </h3>
+              </td>
+
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+      <div id="contentwrapper">
+         <p class="textholder">
+           The first group project of my second year at Imperial saw me build a WACC compiler with three teammates. My comments below may be brief so that I do not give away too much of the project for future students.
+           <br />
+           <br />
+           <b>About the language</b>
+           <br />
+           WACC is a 'while-like language' and provided very simple functionality. It was created by the university specifically for the project and more details on it can be found <a href="http://www.imperial.ac.uk/computing/current-students/course-admin/noticeboards/second-year/labs/">here</a>.
+           <br />
+           The output assembly code had to be compatible with an <i>ARM11</i> architecture.
+           <br />
+           <br />
+           <b>Building the compiler</b>
+           <br />
+           As we decided to write the compiler in <i>Java</i> we were able to use the <i>ANTLR</i> parsing and lexing tool to convert the input file into a tree structure which we parsed and converted into our own abstract syntax tree, our own representation of the program.
+           <br />
+           Following this all that was left to do was to walk through this tree and generate code for each branch. This lead to complications in handling memory as our initial implementation handled memory mainly on the stack and only used registers to hold intermediate values. Given more time, we would have liked to have changed the code generation so that the registers held values wherever possible to make the output code more efficient.
+           <br />
+           <br />
+           <b>Optimisations</b>
+           <br />
+           Once we had a working compiler, we were able to implement an extension of our choice. Whilst other team members extended the language with side-effecting expressions, advanced loops and map and reduce functionality, myself and another team member chose to optmise our output code by introducing constant propagation analysis to our compiler.
+           <br />
+           This involved substituting immediate values in place of variable or heap references and removing dead code from the program such as in if statements where the evaluation of the condition is consistent on every run of the program. Additionally our complier would also evaluate binary expressions.
+           <br />
+           Effectively our complier runs through the program once, replacing values and cutting unnecessary code as it does. This meant some runtime errors had to be checked during compilation and offending code left in to force a runtime error.
+           <br />
+         </p>
+      </div>
+
+    </div>
+  </body>
+
+</html>
