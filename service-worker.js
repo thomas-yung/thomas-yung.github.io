@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.62e6f23332b14856ce7b03c5ff346f2b.js"
+  "/precache-manifest.b6ce7ac0f9405b6668ba0da8f8a017a5.js"
 );
 
 workbox.clientsClaim();
