@@ -1,0 +1,16 @@
+.projects-home-link {
+    color: white;
+    text-decoration: none;
+}
+
+.projects-info {
+    padding: 5px;
+    background-color: rgba(25, 25, 25, 0.5);
+    margin-bottom: 5px;
+}
+
+.projects-notable-entry {
+    margin-bottom: 10px;
+    line-height: 30px;
+
+}
