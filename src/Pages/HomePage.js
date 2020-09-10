@@ -9,8 +9,7 @@ export default class HomePage extends Component {
                 <div id="page-wrapper">
                     <h1 className={'name-title backed-text'}>Thomas Yung</h1>
                     <h3 className={'role-title backed-text'}>
-                        Software Engineer &<br/>
-                        Student at Imperial College London
+                        Software Engineer
                     </h3>
 
                     <div id={'options-wrapper'}>
