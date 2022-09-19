@@ -9,8 +9,7 @@ export default class HomePage extends Component {
                 <div id="page-wrapper">
                     <h1 className={'name-title backed-text'}>Thomas Yung</h1>
                     <h3 className={'role-title backed-text'}>
-                        Software Engineer &<br/>
-                        Student at Imperial College London
+                        Software Engineer
                     </h3>
 
                     <div id={'options-wrapper'}>
@@ -47,7 +46,15 @@ export default class HomePage extends Component {
                         </div>
                         <div className={'stackable'}>
                             <a className={'option-text backed-text'}
-                               href="mailto:thomasyung@hotmail.co.uk">
+                               href="https://thomasyung.notion.site/Blog-f2880117b75d4e3db4817dfb2bd18e22"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Blog
+                            </a>
+                        </div>
+                        <div className={'stackable'}>
+                            <a className={'option-text backed-text'}
+                               href="mailto:yung.thomas@outlook.com">
                                 Contact
                             </a>
                         </div>
