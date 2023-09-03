@@ -1,0 +1,29 @@
+@use "../../colors.scss";
+@use "../../font.scss";
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+}
+
+.menuItem {
+    cursor: pointer;
+    padding: 7px;
+    font-size: 3vmin;
+
+    background: colors.$white-to-black-gradient;
+    background-size: 200% 100%;
+    background-position:right bottom;
+    transition: all 0.4s ease-out;
+
+    border: 0;
+    text-align: start;
+    font-family: font.$font-stack-body;
+}
+
+.menuItem:hover {
+    background-position:left bottom;
+    color: white;
+}

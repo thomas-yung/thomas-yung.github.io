@@ -1,0 +1,81 @@
+@use "../../colors.scss";
+@use "../../font.scss";
+
+.section {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    font-size: 18px;
+
+
+    .background {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-position: right bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
+    }
+
+    
+    .returnToHome {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+        cursor: pointer;
+        border: 0;
+        text-align: flex-start;
+        font-family: font.$font-stack-body;
+        font-size: 18px;
+        background-color: white;
+    }
+    
+    .inner {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 20px;
+        padding-left: 50px;     
+        // background-color: beige;
+        background-position: right bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        
+        .title {
+            align-items: flex-end;
+            display: flex;
+            font-family: font.$font-stack-title;
+            font-size: 6vw;
+            height: 40%;
+            margin: 0;
+        }
+    
+        .body {
+            flex-grow: 1;
+            // background-color: aquamarine;
+        }
+
+        .footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+
+            .text {
+                background-color: white;
+                padding: 0 5px;
+            }
+        }
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
