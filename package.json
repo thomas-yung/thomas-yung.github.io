@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "homepage": "http://thomas-yung.github.io",
+  "name": "thomas-yung.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,8 +24,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
