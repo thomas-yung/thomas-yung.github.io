@@ -32,9 +32,20 @@ const HomeSectionContent: React.FC<IHomeSectionProps> = props => {
 
             <div className={css.divider} />
 
+            <a
+                className={css.link}
+                href={"https://thomasyung.notion.site/Blog-f2880117b75d4e3db4817dfb2bd18e22"}
+                target={"_blank"}
+                rel={"noopener noreferrer"}
+            >
+                My Notion blog (external link)
+            </a>
+
+            <div className={css.divider} />
+
             <div className={css.socialLinks}>
-                <SociaLink icon={instagram} url={"https://www.instagram.com/thomasyung_"} alt={"Instagram icon"} />
-                <SociaLink icon={linkedin} url={"https://www.linkedin.com/in/thomas-yung-42216b13a"} alt={"LinkedIn icon"} />
+                <SocialLink icon={instagram} url={"https://www.instagram.com/thomasyung_"} alt={"Instagram icon"} />
+                <SocialLink icon={linkedin} url={"https://www.linkedin.com/in/thomas-yung-42216b13a"} alt={"LinkedIn icon"} />
             </div>
         </div>
     );
@@ -46,7 +57,7 @@ interface ISocialLinkProps {
     alt: string;
 }
 
-const SociaLink: React.FC<ISocialLinkProps> = ({ icon, url, alt }) => {
+const SocialLink: React.FC<ISocialLinkProps> = ({ icon, url, alt }) => {
     return (
         <a
             href={url}

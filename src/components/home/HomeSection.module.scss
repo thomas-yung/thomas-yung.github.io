@@ -6,6 +6,10 @@
     width: fit-content;
     gap: 15px;
 
+    .menuWrapper {
+        margin-top: 10px;
+    }
+
     .divider {
         border-bottom: 1px solid colors.$black;
     }
@@ -19,6 +23,21 @@
         .icon {
             height: 25px;
             
+        }
+    }
+
+    .link, .link:visited  {
+        color: colors.$black;
+        text-decoration: none;
+        border-bottom: dotted 1px colors.$black;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .homeContent {
+        .link {
+            font-size: 3vh;
         }
     }
 }

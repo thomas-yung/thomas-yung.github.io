@@ -11,7 +11,7 @@
 .menuItem {
     cursor: pointer;
     padding: 7px;
-    font-size: 3vmin;
+    font-size: 2.5vw;
 
     background: colors.$white-to-black-gradient;
     background-size: 200% 100%;
@@ -26,4 +26,11 @@
 .menuItem:hover {
     background-position:left bottom;
     color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    .menuItem {
+        font-size: 3vh;
+    }
 }

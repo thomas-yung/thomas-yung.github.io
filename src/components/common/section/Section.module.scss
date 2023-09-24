@@ -6,7 +6,7 @@
     height: 100vh;
     flex-direction: column;
     font-size: 18px;
-
+    border-top: 1px colors.$black dashed;
 
     .background {
         display: flex;
@@ -43,7 +43,6 @@
         flex-direction: column;
         margin: 20px;
         padding-left: 50px;     
-        // background-color: beige;
         background-position: right bottom;
         background-size: contain;
         background-repeat: no-repeat;
@@ -60,7 +59,6 @@
     
         .body {
             flex-grow: 1;
-            // background-color: aquamarine;
         }
 
         .footer {
@@ -77,5 +75,18 @@
 
     li {
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section {
+        .inner {
+            padding-left: 0;     
+
+            .title {
+                font-size: 5vh;
+                height: 20%;
+            }
+        }
     }
 }
